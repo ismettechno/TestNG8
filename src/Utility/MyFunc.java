@@ -1,6 +1,7 @@
 package Utility;
 
 public class MyFunc {
+
     public static void Bekle(int saniye){
         try {
             Thread.sleep(saniye*1000);

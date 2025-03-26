@@ -1,37 +1,13 @@
-package Gun01;
+package Utility;
 
-import Utility.MyFunc;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class _05_Enable {
-
-    @Test
-    public void Test1()
-    {
-        System.out.println("Test 1");
-        driver.get("https://www.facebook.com/");
-    }
-
-    @Test(enabled = false)  // bu test şimdilik çalışmayacak devre dışı, ignore yapıldı
-    public void Test2()
-    {
-        System.out.println("Test 2");
-    }
-
-    @Test
-    public void Test3()
-    {
-        System.out.println("Test 3");
-        driver.get("https://www.google.com/");
-    }
-
-
+public class BaseDriver {
 
     // aşağısını SDET8 den aldık
     public static WebDriver driver;
@@ -54,5 +30,6 @@ public class _05_Enable {
         MyFunc.Bekle(3);
         driver.quit();  // bütün açılmış windowları kapatır
     }
+
 
 }
