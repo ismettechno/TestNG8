@@ -13,6 +13,7 @@ public class _03_SubscribeNewsLetter extends BaseDriver {
   1- Siteyi açınız.
   2- Newsletter  Subscribe işlemini abone olunuz(YES)  , işlemin başarılı olduğunu kontrol ediniz.
   3- Ayrı bir test ile Newsletter  Subscribe işlemini abonelikten çıkınız(NO)
+  4- Ayrı bir test ile Newsletter  Subscribe durumunu kontrol ediniz YES ise NO, NO ise YES yapınız.
      */
 
     By link=By.linkText("Newsletter");
@@ -42,6 +43,25 @@ public class _03_SubscribeNewsLetter extends BaseDriver {
 
         WebElement subscribeNo=driver.findElement(subNo);
         subscribeNo.click();
+
+        WebElement continueButton=driver.findElement(cntBtn);
+        continueButton.click();
+
+        WebTool.SuccessMessageValidation();
+    }
+
+    @Test
+    public void SubscribeFunctionForBoth(){
+        WebElement newsLetterLink=driver.findElement(link);
+        newsLetterLink.click();
+
+        WebElement subscribeYes=driver.findElement(subYes);
+        WebElement subscribeNo=driver.findElement(subNo);
+
+        if (subscribeYes.isSelected())
+            subscribeNo.click();
+        else
+            subscribeYes.click();
 
         WebElement continueButton=driver.findElement(cntBtn);
         continueButton.click();
