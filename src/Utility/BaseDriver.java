@@ -29,7 +29,6 @@ public class BaseDriver {
         LoginTest();
     }
 
-
     public void LoginTest()
     {
         System.out.println("Login Test başladı");
