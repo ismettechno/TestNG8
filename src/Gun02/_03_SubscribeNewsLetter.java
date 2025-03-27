@@ -21,7 +21,7 @@ public class _03_SubscribeNewsLetter extends BaseDriver {
     By cntBtn=By.xpath("//*[@value='Continue']");
     By subNo=By.xpath("//input[@type='radio' and @value='0']");
 
-    @Test
+    @Test(priority = 1)
     public void SubscribeFunctionYes()
     {
         WebElement newsLetterLink=driver.findElement(link);
@@ -36,7 +36,7 @@ public class _03_SubscribeNewsLetter extends BaseDriver {
         WebTool.SuccessMessageValidation();
     }
 
-    @Test
+    @Test(priority = 2)
     public void SubscribeFunctionNo(){
         WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
@@ -50,7 +50,7 @@ public class _03_SubscribeNewsLetter extends BaseDriver {
         WebTool.SuccessMessageValidation();
     }
 
-    @Test
+    @Test(priority = 3)
     public void SubscribeFunctionForBoth(){
         WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
