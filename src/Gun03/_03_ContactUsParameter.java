@@ -11,21 +11,21 @@ import Utility.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class _02_ContactUs extends BaseDriver {
+// Buradaki test parametre beklediğindne SADECE XML den çalıştırılabilir
+public class _03_ContactUsParameter extends BaseDriver {
 
     @Test
-    public void contactUs(){
+    @Parameters("mesaj") // xml de ki ile name ile aynı olmalı
+    public void contactUs(String gelenMesaj){
         WebElement contactUsBtn=driver.findElement(By.linkText("Contact Us"));
         contactUsBtn.click();
 
         WebElement enquiryArea=driver.findElement(By.id("input-enquiry"));
-        enquiryArea.sendKeys("Merhaba testing dünyası");
+        enquiryArea.sendKeys(gelenMesaj);
 
         WebElement submitBtn=driver.findElement(By.cssSelector("[type='submit']"));
         submitBtn.click();
