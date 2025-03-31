@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="mySuit">
+    <test name="test1">
+        <parameter name="mesaj" value="Merhaba testing dünyası, bizde geldik"></parameter>
+        <parameter name="mesaj2" value="Merhaba testing dünyası, merhaba"></parameter>
+
+        <classes>
+            <class name="Gun03._03_ContactUsParameter"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <parameter name="mesaj" value="TestNG nin en önemli özelliği XML File dır"></parameter>
+
+        <classes>
+            <class name="Gun03._03_ContactUsParameter"></class>
+        </classes>
+    </test>
+</suite>

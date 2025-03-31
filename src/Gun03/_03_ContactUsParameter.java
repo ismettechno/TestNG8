@@ -8,6 +8,7 @@ package Gun03;
 
 
 import Utility.BaseDriver;
+import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +19,9 @@ import org.testng.annotations.Test;
 // Buradaki test parametre beklediğindne SADECE XML den çalıştırılabilir
 public class _03_ContactUsParameter extends BaseDriver {
 
+//    @Parameters({"mesaj","mesaj2"})// xml deki parametre adı aynı olmak zorunda
+//    void contactUs(String gelenMesaj,String m2){
+
     @Test
     @Parameters("mesaj") // xml de ki ile name ile aynı olmalı
     public void contactUs(String gelenMesaj){
@@ -26,6 +30,7 @@ public class _03_ContactUsParameter extends BaseDriver {
 
         WebElement enquiryArea=driver.findElement(By.id("input-enquiry"));
         enquiryArea.sendKeys(gelenMesaj);
+        MyFunc.Bekle(2);
 
         WebElement submitBtn=driver.findElement(By.cssSelector("[type='submit']"));
         submitBtn.click();
