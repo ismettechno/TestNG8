@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="mySuit">
+    <test name="test1">
+        <classes>
+            <class name="Gun02._07_Intro">
+
+               <methods>
+                   <exclude name="Intro04_Test3"/>
+                   <!-- Çalışmasını istemediğim metodları yazıyorum-->
+                   <!-- Intro04_Test3 dışındakiler çalışacak-->
+               </methods>
+
+            </class>
+        </classes>
+    </test>
+</suite>

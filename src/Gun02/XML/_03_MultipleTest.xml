@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="mySuit">
+    <test name="test1">
+        <classes>
+            <class name="Gun02._06_Intro"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <classes>
+            <class name="Gun02._07_Intro"></class>
+        </classes>
+    </test>
+
+</suite>
