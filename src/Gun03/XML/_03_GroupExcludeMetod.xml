@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Smoke Test harici ve Test 7 de harici çalıştır-->
+<suite name="mySuit">
+    <test name="test1">
+
+        <!--çalışacak classların yazıldığı bölüm-->
+        <classes>
+            <class name="Gun03._01_Groups">
+                <methods>
+                    <exclude name="Test7"/>
+                </methods>
+            </class>
+        </classes>
+
+        <!-- hangi grupların dışındakiler çalıştırılacak-->
+        <groups>
+             <run>
+                 <exclude name="Smoke Test"></exclude>
+             </run>
+        </groups>
+
+    </test>
+</suite>
