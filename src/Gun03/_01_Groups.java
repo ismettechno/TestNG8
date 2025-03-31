@@ -26,9 +26,11 @@ public class _01_Groups {
     @Test
     public void Test7() { System.out.println("test7"); }
 
+    //include durumlarında çalışır
     @BeforeGroups(groups={"Smoke Test", "Regression" })
     public void bGroups() { System.out.println("Before Groups"); }
 
+    //include durumlarında çalışır
     @AfterGroups(groups={"Smoke Test", "Regression" })
     public void aGroups() { System.out.println("After Groups"); }
 
