@@ -6,6 +6,7 @@ package Gun06;
        2- Adress Ekleyiniz.
        3- En son adresi edit yaparak ad ve soyadı değiştirip kaydediniz.
        4- En son adresi siliniz.
+       (POM olmadan çözünüz)
  */
 
 public class _03_AddressFunctionality {
