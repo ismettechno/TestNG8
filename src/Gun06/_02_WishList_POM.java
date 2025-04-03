@@ -1,4 +1,4 @@
-package Gun05;
+package Gun06;
 
 /*
     Senaryo ;
@@ -7,8 +7,12 @@ package Gun05;
     3- çıkan elamnlardan random bir elelamnı Add Wish butonuna tıklayınız.
     4- Daha sonra WishList e tıklatınız
     5- Burada çıkan ürünle tıklanan ürünün isminin aynı olup olmadığını doğrulayınız.
-    (POM olmadan çözünüz)
+    (POM ile çözünüz)
  */
 
-public class _06_WishList {
+
+public class _02_WishList_POM {
+
+
+
 }
