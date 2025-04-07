@@ -8,10 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -82,6 +80,14 @@ public class BaseDriver {
         LogTutma.info("Metod başladı");
 
         LogTutma.warn("WARN : Metod başladı, hata oluşmuş olsa idi");
+    }
+
+    @AfterMethod
+    public void AfterMetod(ITestResult sonuc) // tesin sonuç ve isim bilgisini olduğu değişkeni
+    {
+        LogTutma.info(sonuc.getName()+",  Metod Bitti"+" Sonuc="+ (sonuc.getStatus()==1 ? "Passed" : "Failed") );
+
+        LogTutma.warn("WARN : Metod bitti, hata oluşmuş olsa idi bu şekilde eklenebilir.Bir if kontrolü ile");
     }
 
 

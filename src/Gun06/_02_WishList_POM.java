@@ -27,6 +27,7 @@ public class _02_WishList_POM extends BaseDriver {
     @Test
     public void addToWishList() {
 
+        LogTutma.info("addToWishList testi başladı");
         _04_PlaceOrder_Elementleri poe=new _04_PlaceOrder_Elementleri();
         _02_WishList_Elements wle=new _02_WishList_Elements();
 
@@ -45,8 +46,11 @@ public class _02_WishList_POM extends BaseDriver {
             if (e.getText().equals(selectedProductName))
                 bulundu=true;
 
+        LogTutma.fatal("addToWishList testi hatalı bitti");
+
         Assert.assertTrue(bulundu, "WishListe eklenen ürün listede bulunamadı");
 
+        LogTutma.info("addToWishList testi bitti");
     }
 
 
