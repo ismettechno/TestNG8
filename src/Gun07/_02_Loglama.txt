@@ -1,0 +1,30 @@
+Loglama : program çalışırken, gerekli adımlara
+          kendine bilgi olarak eklenen çıktılar : ekrana, dosyaya yazılır
+
+Loglama geçmişi
+Log4j (v1)-> log for Java -> Java için loglama -> apache
+JUL   -> Java için loglama , java grubu
+SLF4J -> Simple Logging Facade for Java -> (JUL kullanılarak) piayasa çıkıyor
+Log4j (V2) -> Log4j nin 2.versiyoun
+
+
+org.apache.logging.log4j:log4j-api:2.20.0
+org.apache.logging.log4j:log4j-core:2.20.0
+
+apache log4j xml configuration -> HowDoDoin sayfasındna göster
+
+
+try{
+  Log.info(işlem başladı)
+
+
+
+  log.info(işlem tamamlandı)
+}
+catch{
+  log.warn(şu kullanıca hata oldu+ex.message)
+
+}
+
+https://howtodoinjava.com/log4j2/log4j2-xml-configuration-example/
+https://qaautomation.expert/2023/11/24/how-to-save-log4j-2-logs-in-output-file-using-xml-configuration/
